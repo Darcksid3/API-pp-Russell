@@ -3,3 +3,4 @@
 /test
 /etc/secret/.env.prod
 package-lock.json
+.env
