@@ -97,7 +97,10 @@ app.use('/catways', catRouter);
 
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
-
+// Reveil de l'api depuis le portfolio
+app.get('/ping', (req, res) => {
+    res.status(200).send('pong');
+});
 
 
 
