@@ -88,6 +88,11 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Reveil de l'api depuis le portfolio
+app.get('/api/ping', (req, res) => {
+    res.status(200).send('pong');
+});
+
 app.use('/', indexRouter);
 app.use('/login', loginRouter)
 app.use('/logout', logoutRouter);
@@ -97,10 +102,7 @@ app.use('/catways', catRouter);
 
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
-// Reveil de l'api depuis le portfolio
-app.get('/ping', (req, res) => {
-    res.status(200).send('pong');
-});
+
 
 
 
