@@ -1,0 +1,7 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  min-width: 20%;
+  background-color: rgba(141,180,252,60%);
+  border-left: darkgray 2px dashed;
+}

@@ -1,11 +1,18 @@
 @import url("header.css");
 @import url("button.css");
 @import url("index.css");
+@import url("menu.css");
+@import url("navuser.css");
+@import url("aside.css");
 
 @import url("footer.css");
 
 :root {
   --border-color: rgb(78, 126, 222);
+  --background-white: white;
+  --text-blue: navy;
+  --background-blue:navy;
+  --text-white: white;
 }
 
 body {
@@ -33,6 +40,7 @@ h2 {
   color: red;
 }
 .conteneur {
+  height: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -43,45 +51,6 @@ h2 {
   width: 100%;
 }
 
-.nav {
-  padding-left: 15px;
-  display: flex;
-  flex-direction: column;
-  min-width: 20%;
-  background-color: rgba(141,180,252,60%);
-  border-right: darkgray 2px dashed;
-}
-
-.nav a {
-  color: black;
-  text-transform: uppercase;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.nav a:hover{
-  font-weight: bolder;
-  font-style: italic;
-  text-decoration: underline;
-}
-
-.navuser{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  background-color: rgba(141,180,252,90%);
-  border-bottom: darkgray 2px dashed;
-  padding: 20px;
-}
-
-.navuser a{
-  color: white;
-  background-color: dimgray;
-  padding: 10px;
-  border-radius: 20px 20px;
-  border-color: black;
-  font-weight: bold;
-}
 
 .section {
   display:flex;
@@ -91,13 +60,6 @@ h2 {
   width: 50%;
 }
 
-.aside {
-  display: flex;
-  flex-direction: column;
-  min-width: 20%;
-  background-color: rgba(141,180,252,60%);
-  border-left: darkgray 2px dashed;
-}
 
 .errmess {
   color:red;
@@ -114,6 +76,7 @@ td {
 }
 
 .user-connected {
+  margin-left: 2em;
   text-align: center;
   background-color: rgba(141,180,252,90%);
   color:rgb(255, 255, 255);

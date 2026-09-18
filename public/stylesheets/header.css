@@ -33,3 +33,21 @@ header {
   align-items: center;
   flex-basis: 20%;
 }
+
+.btn-documentation {
+  display: block;
+  padding:0.5em;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5em;
+  background-color: var(--background-white);
+  color: var(--text-blue);
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+.btn-documentation:hover {
+  background-color: var(--background-blue);
+  color: var(--text-white);
+  transform: scale(1.5);
+  z-index: 1000;
+}
