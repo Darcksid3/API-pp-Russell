@@ -1,0 +1,21 @@
+#form_login{
+  display: none;
+}
+
+.accueil {
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.description {
+  line-height: 20px;
+  padding: 20px;
+  width: 50%;
+  font-weight: 600;
+  text-indent: 40px;
+  box-shadow: black 2px 2px 5px;
+}

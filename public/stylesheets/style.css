@@ -1,49 +1,30 @@
+@import url("header.css");
+@import url("button.css");
+@import url("index.css");
+
+@import url("footer.css");
+
+:root {
+  --border-color: rgb(78, 126, 222);
+}
+
 body {
-  padding: 50px;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-footer{
-  padding: 15px;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: rgba(148,212,245,60%); 
-  color:black;
+  justify-content: space-between;
 }
 
-header {
-  background-color: rgba(148,212,245,60%); 
-  color:black;
-  border-bottom: black 2px solid;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.logo-header {
-  display: flex;
-  justify-content: center;
-  flex-basis: 20%;
-}
-
-.logo-header img{
-  width: 150px;
-  height: 150px;
-}
-
-.titre-header {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-basis: 80%;
-}
-
-footer {
-  border-top: black 2px solid;
+main {
+  height: calc(100% - 66px);
+  flex:1;
 }
 
 h2 {
-  background-color: burlywood;
+  background-color: rgb(120, 169, 206);
   border-radius: 20px;
   padding: 10px;
 }
@@ -110,14 +91,6 @@ h2 {
   width: 50%;
 }
 
-.accueil {
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  margin-bottom: 20px;
-}
-
 .aside {
   display: flex;
   flex-direction: column;
@@ -133,19 +106,6 @@ h2 {
 
 label {
   font-weight: 700;
-}
-
-#form_login{
-  display: none;
-}
-
-.description {
-  line-height: 20px;
-  padding: 20px;
-  width: 50%;
-  font-weight: 600;
-  text-indent: 40px;
-  box-shadow: black 2px 2px 5px;
 }
 
 td {
@@ -194,46 +154,4 @@ td {
   flex-direction: column;
   gap: 10px;
   align-items: center;
-}
-
-.afficher {
-  background-color: darkgreen;
-  color: white;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: black 2px 2px 5px ;
-  padding: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-}
-.afficher:hover {
-  background-color: green;
-  color: white;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: black 2px 2px 5px ;
-  padding: 5px;
-  font-weight: bold;
-  text-decoration: underline;
-  text-align: center;
-}
-
-.modifier {
-  background-color: darkorange;
-  color: white;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: black 2px 2px 5px ;
-  padding: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-}
-.modifier:hover {
-  background-color: orange;
-  color: white;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: black 2px 2px 5px ;
-  padding: 5px;
-  font-weight: bold;
-  text-decoration: underline;
-  text-align: center;
 }

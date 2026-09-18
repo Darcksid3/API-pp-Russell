@@ -1,0 +1,10 @@
+footer{
+  padding: 15px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(148,212,245,60%); 
+  color:black;
+  border-top: rgb(78, 126, 222) 4px solid;
+  border-radius: 2em 2em 0 0;
+}

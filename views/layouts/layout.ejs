@@ -1,27 +1,17 @@
 <% visite = typeof visite !=='undefined' ? visite : '0' %>
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <title>Port de plaisance Russell</title>
-    <link rel="icon" href="/images/favicon.ico" />
-    <link rel="icon" type="image/png" href="/images/bateau.png" />
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    
-</head>
-
-<body>
-    <%- include('../partials/Header') -%>
-    
-
-            <%- body %>
-
-
-    
-    <%- include('../partials/Footer') -%>
-    <script src="/javascripts/script.js"></script>
-    
-</body>
-
+    <head>
+        <meta charset="utf-8">
+        <title>Port de plaisance Russell</title>
+        <link rel="icon" href="/images/favicon.ico" />
+        <link rel="icon" type="image/png" href="/images/bateau.png" />
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <%- include('../partials/Header') -%>
+        <%- body %>
+        <%- include('../partials/Footer') -%>
+        <script src="/javascripts/script.js"></script>
+    </body>
 </html>
