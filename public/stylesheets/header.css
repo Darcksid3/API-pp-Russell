@@ -2,10 +2,15 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: rgba(148,212,245,60%); 
-  color:black;
+  background-color: var(--background-light-blue); 
   border-bottom: 4px solid var(--border-color);
   border-radius: 0 0 2em 2em;
+}
+
+header h1 {
+  color: var(--text-blue);
+  text-transform: uppercase;
+  font-style: oblique;
 }
 
 .logo-header {

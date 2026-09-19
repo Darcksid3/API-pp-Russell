@@ -4,15 +4,20 @@
 @import url("menu.css");
 @import url("navuser.css");
 @import url("aside.css");
+@import url("user-connected.css");
 
 @import url("footer.css");
 
 :root {
-  --border-color: rgb(78, 126, 222);
+  /* Background */
   --background-white: white;
-  --text-blue: navy;
+  --background-light-blue: rgba(148,212,245,60%);
   --background-blue:navy;
+  /* Text */
   --text-white: white;
+  --text-blue: navy;
+  /* Border */
+  --border-color: rgb(78, 126, 222);
 }
 
 body {
@@ -73,13 +78,6 @@ label {
 td {
   border-bottom: 1px navy solid;
   padding: 10px;
-}
-
-.user-connected {
-  margin-left: 2em;
-  text-align: center;
-  background-color: rgba(141,180,252,90%);
-  color:rgb(255, 255, 255);
 }
 
 .form-contnair {
