@@ -8,3 +8,10 @@ footer{
   border-top: rgb(78, 126, 222) 4px solid;
   border-radius: 2em 2em 0 0;
 }
+
+footer a {
+  text-decoration: none;
+  color: var(--text-blue);
+  font-weight: 700;
+  font-style: italic;
+}
