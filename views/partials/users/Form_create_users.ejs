@@ -9,11 +9,11 @@
         <div class="form-contnair">
             <div class="form-row">
                 <div class="form-column"><label for="name">Nom:</label></div>
-                <div class="form-column"><input type="text" name="name" id="name" placeholder="Votre nom !"  value="<%= session.formData.name  ? session.formData.name : '' %> " required /></div>
+                <div class="form-column"><input type="text" name="name" id="name" placeholder="Votre nom !"  value="<%= //session.formData.name ? session.formData.name : '' %> " required /></div>
             </div>
             <div class="form-row">
                 <div class="form-column"><label for="email">Email:</label></div>
-                <div class="form-column"><input type="email" name="email" id="email" placeholder="Votre email !" value="<%= session.formData.email  ? session.formData.email : '' %> " required /></div>
+                <div class="form-column"><input type="email" name="email" id="email" placeholder="Votre email !" value="<%= //session.formData.email  ? session.formData.email : '' %> " required /></div>
             </div>
             <div class="form-column">
                 <div class="form-row">
@@ -43,4 +43,5 @@
     btnSubmit.addEventListener('click', function(event) {
         errElement.textContent = '';
     });
+    console.log(FormData)
 </script>

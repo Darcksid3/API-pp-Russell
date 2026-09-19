@@ -1,4 +1,16 @@
+<% 
+	style = new Intl.DateTimeFormat("fr-FR", {year:"numeric", month:"long", weekday:"long", day:"numeric"});
+	dt = new Date();
+	date = style.format(dt)
+%>
 <div class="user-connected">
-    <p>Nous somme le : <%= date %></p>
-    <p>Connecté en tant que <b><%= session.name %></b> avec l'email <b><%= session.email %></b>.</p>
+    <p>
+        <span class="user-connected-info"><%= date %></span>
+    </p> 
+    <p>
+        Utilisateur: <span class="user-connected-info"><%= session.name %></span>
+    </p>
+    <p>
+        Email: <span class="user-connected-info"><%= session.email %></span>
+    </p>
 </div>

@@ -3,17 +3,15 @@
 	<%- include('../partials/menu') -%>
 
 		<div class="dashcenter">
-			<%- include('../partials/User_connected')-%>
-			<!-- Tableau de bord Réservation MENU -->
-			<nav class="navuser">
-				<a href="/catways/reservations?page=findAllReserv">Affiché toutes les réservations</a>
-				<a href="/catways/reservations?page=createReserv">Crée une réservation</a>
-			</nav>
-			<!-- Fin du menu du tableau de bord utilisateur -->
+			<div>
+				<%- include('../partials/User_connected')-%>
+				<nav class="navuser">
+					<a href="/catways/reservations?page=findAllReserv">Toutes</a>
+					<a href="/catways/reservations?page=createReserv">Nouvelle</a>
+				</nav>
+			</div>
 			<section class="section">
-			<!-- partie visite pour controle de la gestion des sessions -->
 			<h2>Gestion des réservation</h2>
-
 			<!-- Affichage du centre de la page-->
 			<div>
 				<% if (typeof session.page !== 'undefined') { %>

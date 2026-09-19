@@ -1,26 +1,19 @@
-<% 
-	style = new Intl.DateTimeFormat("fr-FR", {year:"numeric", month:"long", weekday:"long", day:"numeric"});
-	dt = new Date();
-	date = style.format(dt)
-%>
 <main>
 	<div class="conteneur">
 		<%- include('../partials/menu') -%>
 
 		<div class="dashcenter">
+			<div>
 				<%- include('../partials/User_connected')-%>
-			<!-- Tableau de bord utilisateur MENU -->
-			<nav class="navuser">
-				<a href="/users?page=findAllUsers">Utilisateur</a>
-				<a href="/catways?page=findAllCatway">Catways</a>
-				<a href="/catways/reservations">Reservation</a>
-			</nav>
-			<!-- Fin du menu du tableau de bord utilisateur -->
-			
+				<!-- Tableau de bord navigation utilisateur --> 
+				<nav class="navuser">
+					<a href="/users?page=findAllUsers">Utilisateur</a>
+					<a href="/catways?page=findAllCatway">Catways</a>
+					<a href="/catways/reservations">Réservation</a>
+				</nav>
+			</div>
 			<section class="section">
-				<!-- partie visite pour controle de la gestion des sessions -->
 				<h2>Tableau de bord</h2>
-				<!-- Message d'acceuil contenant la date du jours ainsi le nom et l'email de la personne connecté-->
 				<div>
 					<% if (typeof session !=='undefined') { %>
 						<% if (typeof reservations !== 'undefined' && reservations.length > 0) { %>
@@ -30,7 +23,7 @@
 							</thead>
 							<% reservations.forEach(function(res) { %>
 							<tr>
-								<td> <%= res.catwayNumber %></td>
+								<td><%= res.catwayNumber %></td>
 								<td><%= res.clientName %> </td>
 								<td><%= res.boatName %> </td>
 								<td><%= new Date(res.startDate).toLocaleDateString('fr-FR') %> </td> 
