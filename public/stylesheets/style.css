@@ -18,6 +18,12 @@
   --text-blue: navy;
   /* Border */
   --border-color: rgb(78, 126, 222);
+  /* Button */
+  --button-green: darkgreen;
+  --button-light-green : green;
+  --button-orange: darkorange;
+  --button-light-orange: orange;
+  
 }
 
 body {
@@ -31,46 +37,63 @@ body {
 }
 
 main {
-  height: calc(100% - 66px);
+  margin-bottom: 1em;
   flex:1;
 }
 
 h2 {
-  background-color: rgb(120, 169, 206);
-  border-radius: 20px;
-  padding: 10px;
+  color: var(--text-blue);
+  border: 4px solid var(--border-color);
+  border-radius: 1em;
+  padding: 0.5em;
+  text-transform: uppercase;
 }
 
+/* Message d'erreur */
 .attention {
   color: red;
 }
+
 .conteneur {
   height: 100%;
   display: flex;
   flex-direction: row;
 }
 
+.sidebar {
+  flex-basis: 15%;
+}
+
 .dashcenter {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  justify-content: space-between;
 }
 
+.dashcenter-header {
+  border: 5px solid orangered;
+}
 
 .section {
+  margin: 0 2em;
+  margin-top: 1em;
   display:flex;
   flex-direction: column;
-  margin: auto;
   align-items: center;
-  width: 50%;
+  border: 5px solid purple;
+  flex:1;
 }
 
-
+.affichage {
+  border:4px solid green;
+}
 .errmess {
   color:red;
   font-weight: bold;
 }
 
+/* * Formulaires */
 label {
   font-weight: 700;
 }

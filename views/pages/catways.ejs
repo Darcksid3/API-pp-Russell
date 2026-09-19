@@ -1,76 +1,81 @@
-
 <main>    
     <div class="conteneur">
+        
         <%- include('../partials/menu') -%>
-
+        
         <div class="dashcenter">
-            <%- include('../partials/User_connected')-%>
-        <!-- Tableau de bord utilisateur MENU -->
-        <nav class="navuser">
-            <a href="/catways?page=findAllCatway">Tous</a>
-            <a href="/catways?page=findOneCatway">Rechercher</a>
-            <a href="/catways?page=createCatway">Ajouter</a>
-        </nav>
-        <!-- Fin du menu du tableau de bord utilisateur -->
-
-        <section class="section">
-            <!-- partie visite pour controle de la gestion des sessions -->
-            <h2>Gestion des catways</h2>
-
-            <!-- Affichage du centre de la page-->
-            <div >
-            <% if (typeof session.page !== 'undefined') { %>
-                <% if (session.page === 'findAllCatway') { %>
-                    <div>
-                        <h3>Touts les catways</h3>
-                        <% if (typeof allCatways !== 'undefined' && allCatways.length > 0) { %>
-                        <table>
-                            <thead>
-                                <td>Numero</td><td>Type</td><td>Etat</td><td>Reservation</td><td></td>
-                            </thead>
-                            <tbody>
-                            <% allCatways.forEach(function(catways) { %>
-                            <tr>
-                                <td><%= catways.catwayNumber %></td>
-                                <td><%= catways.catwayType %></td>
-                                <td><%= catways.catwayState %></td>
-                                <td><a href="/catways/<%= catways.catwayNumber %>/reservations?page=findForCatway" class="afficher">Reservation</a></td>
-                                <td><a href="/catways/<%= catways.catwayNumber %>?page=modifyCatway" class="modifier">Modifier</a></td>
-                            </tr>
-                            <% }); %>
-                            </tbody>
-                            <tfoot>
-                                <td>Numero</td><td>Type</td><td>Etat</td><td>Reservation</td><td></td>
-                            </tfoot>
-                        </table>
-                        <% } else { %>
-                            <p>Aucun catway trouvée.</p>
-                        <% } %>
-                    </div>
-                <% } else if (session.page === 'findOneCatway') { %>
-                    <div>
-                        <%- include('../partials/catway/Form_find_catway') -%>
-                    </div>
-                <% } else if (session.page === 'createCatway') { %>
-                    <div>
-                        <%- include('../partials/catway/Form_create_catway') -%>
-                    </div>
-                <% } else if (session.page === 'modifyCatway') {%>
-                    <div>
-                        <%- include('../partials/catway/Form_modify_catway') -%>
-                    </div>
-                <% } else { %>
-                    <p class="errmess">Variable page manquante</p>
-            <% }} %>
+            <div>
+                <%- include('../partials/User_connected')-%>
+                <nav class="navuser">
+                    <a href="/catways?page=findAllCatway">Tous</a>
+                    <a href="/catways?page=findOneCatway">Rechercher</a>
+                    <a href="/catways?page=createCatway">Ajouter</a>
+                </nav>
             </div>
-            <!-- affichage de l'email demandé -->
-            <% if (typeof afficheCatway !== 'undefined') {  %>
-            <div id="reponce"> <%= afficheCatway %></div>
-            <%  } %>
-            
-        </section>
+            <section class="section">
+                <!-- partie visite pour controle de la gestion des sessions -->
+                <h2>Gestion des catways</h2>
 
+                <!-- Affichage du centre de la page-->
+                <div class="affichage">
+                <% if (typeof session.page !== 'undefined') { %>
+                    <% if (session.page === 'findAllCatway') { %>
+                        <div>
+                            <h3>Touts les catways</h3>
+                            <% if (typeof allCatways !== 'undefined' && allCatways.length > 0) { %>
+                            <table>
+                                <thead>
+                                    <td>Numero</td>
+                                    <td>Type</td>
+                                    <td>Etat</td>
+                                    <td>Reservation</td>
+                                    <td></td>
+                                </thead>
+                                <tbody>
+                                <% allCatways.forEach(function(catways) { %>
+                                <tr>
+                                    <td><%= catways.catwayNumber %></td>
+                                    <td><%= catways.catwayType %></td>
+                                    <td><%= catways.catwayState %></td>
+                                    <td><a href="/catways/<%= catways.catwayNumber %>/reservations?page=findForCatway" class="afficher">Reservation</a></td>
+                                    <td><a href="/catways/<%= catways.catwayNumber %>?page=modifyCatway" class="modifier">Modifier</a></td>
+                                </tr>
+                                <% }); %>
+                                </tbody>
+                                <tfoot>
+                                    <td>Numero</td>
+                                    <td>Type</td>
+                                    <td>Etat</td>
+                                    <td>Reservation</td>
+                                    <td></td>
+                                </tfoot>
+                            </table>
+                            <% } else { %>
+                                <p>Aucun catway trouvée.</p>
+                            <% } %>
+                        </div>
+                    <% } else if (session.page === 'findOneCatway') { %>
+                        <div>
+                            <%- include('../partials/catway/Form_find_catway') -%>
+                        </div>
+                    <% } else if (session.page === 'createCatway') { %>
+                        <div>
+                            <%- include('../partials/catway/Form_create_catway') -%>
+                        </div>
+                    <% } else if (session.page === 'modifyCatway') {%>
+                        <div>
+                            <%- include('../partials/catway/Form_modify_catway') -%>
+                        </div>
+                    <% } else { %>
+                        <p class="errmess">Variable page manquante</p>
+                <% }} %>
+                </div>
+                <!-- affichage de l'email demandé -->
+                <% if (typeof afficheCatway !== 'undefined') {  %>
+                <div id="reponce"> <%= afficheCatway %></div>
+                <%  } %>
+                
+            </section>
         </div>
-		
     </div>
 </main>

@@ -1,8 +1,8 @@
-/* * Boutons  */
 .afficher {
-  background-color: darkgreen;
-  color: white;
-  border-radius: 20px 20px 20px 20px;
+  background-color:var(--background-white);
+  color: var(--button-green);
+  border: 1px solid var(--button-green);
+  border-radius: 0.5em;
   box-shadow: black 2px 2px 5px ;
   padding: 5px;
   font-weight: bold;
@@ -10,20 +10,16 @@
   text-align: center;
 }
 .afficher:hover {
-  background-color: green;
-  color: white;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: black 2px 2px 5px ;
-  padding: 5px;
-  font-weight: bold;
+  background-color: var(--button-green);
+  color: var(--text-white);
   text-decoration: underline;
-  text-align: center;
 }
 
 .modifier {
-  background-color: darkorange;
-  color: white;
-  border-radius: 20px 20px 20px 20px;
+  background-color: var(--background-white);
+  color: var(--button-orange);
+  border: 1px solid var(--button-orange);
+  border-radius: 0.5em;
   box-shadow: black 2px 2px 5px ;
   padding: 5px;
   font-weight: bold;
@@ -31,12 +27,7 @@
   text-align: center;
 }
 .modifier:hover {
-  background-color: orange;
-  color: white;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: black 2px 2px 5px ;
-  padding: 5px;
-  font-weight: bold;
+  background-color:var(--button-orange);
+  color: var(--text-white);
   text-decoration: underline;
-  text-align: center;
 }
