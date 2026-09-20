@@ -91,7 +91,12 @@ async function updateAvailabilities() {
     }
 }
 
-startDateInput.addEventListener('change', updateAvailabilities);
+function updateEndDate() {
+    endDateInput.setAttribute('min', startDateInput.value );
+    endDateInput.setAttribute('value', startDateInput.value );
+}
+
+startDateInput.addEventListener('change', updateEndDate, updateAvailabilities);
 endDateInput.addEventListener('change', updateAvailabilities);
 
 typeRadios.forEach(radio => {
