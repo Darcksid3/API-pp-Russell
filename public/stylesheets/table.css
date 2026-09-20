@@ -4,23 +4,22 @@
   border-radius: 0.5rem;
   width: 100%;
 }
+
 .table th, .table td {
-  border: 2px solid;
-  border-color: #c0c0c0;
-  padding: 0.5rem;
+  border-bottom: 2px solid var(--text-blue);
+  padding: 1em;
   text-align: center;
+  font-weight: 700;
   transition: padding 0.3s ease, background-color 0.2s ease;
 }
+
 .table th {
-  color: #f1f8fc;
-  background-color: #384050;
+  color: var(--text-blue);
+  background-color: var(--background-white);
 }
 
-.table th a {
-  color: #f1f8fc;
-}
 .table tbody tr:nth-child(odd) {
-  background-color: #d3d3d3;
+  background-color: var(--background-light-blue);
 }
 .table tbody tr:hover td {
   padding-top: 25px !important;
