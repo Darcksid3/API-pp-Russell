@@ -19,11 +19,13 @@
 				<% if (typeof session.page !== 'undefined') { %>
 				<% if (session.page === 'findAllUsers') { %>
 				<div class="affichage">
-					<h3>Tout les utilisateur</h3>
+					<h3>Tout les utilisateurs</h3>
 					<% if (typeof allUsers !== 'undefined' && allUsers.length > 0) { %>
-					<table>
+					<table class="table">
 						<thead>
-							<td>Nom</td><td>Email</td><td></td>
+							<th>Nom</th>
+							<th>Email</th>
+							<th></th>
 						</thead>
 						<% allUsers.forEach(function(users) { %>
 						<tr>

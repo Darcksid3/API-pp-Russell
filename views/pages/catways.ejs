@@ -21,15 +21,15 @@
                 <% if (typeof session.page !== 'undefined') { %>
                     <% if (session.page === 'findAllCatway') { %>
                         <div>
-                            <h3>Touts les catways</h3>
+                            <h3>Tous les catways</h3>
                             <% if (typeof allCatways !== 'undefined' && allCatways.length > 0) { %>
-                            <table>
+                            <table class="table">
                                 <thead>
-                                    <td>Numéro</td>
-                                    <td>Type</td>
-                                    <td>Etat</td>
-                                    <td>Réservation</td>
-                                    <td></td>
+                                    <th>Numéro</th>
+                                    <th>Type</th>
+                                    <th>Etat</th>
+                                    <th>Réservation</th>
+                                    <th></th>
                                 </thead>
                                 <tbody>
                                 <% allCatways.forEach(function(catways) { %>
@@ -43,11 +43,11 @@
                                 <% }); %>
                                 </tbody>
                                 <tfoot>
-                                    <td>Numéro</td>
-                                    <td>Type</td>
-                                    <td>Etat</td>
-                                    <td>Réservation</td>
-                                    <td></td>
+                                    <th>Numéro</th>
+                                    <th>Type</th>
+                                    <th>Etat</th>
+                                    <th>Réservation</th>
+                                    <th></th>
                                 </tfoot>
                             </table>
                             <% } else { %>

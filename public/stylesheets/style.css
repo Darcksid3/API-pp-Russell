@@ -5,7 +5,7 @@
 @import url("navuser.css");
 @import url("aside.css");
 @import url("user-connected.css");
-
+@import url("table.css");
 @import url("footer.css");
 
 :root {
@@ -49,11 +49,17 @@ h2 {
   text-transform: uppercase;
 }
 
-/* Message d'erreur */
+/* ! Message d'erreur */
 .attention {
   color: red;
 }
 
+.errmess {
+  color:red;
+  font-weight: bold;
+}
+
+/* ? Layout central */
 .conteneur {
   height: 100%;
   display: flex;
@@ -87,19 +93,20 @@ h2 {
 .affichage {
   border: none;
 }
-.errmess {
-  color:red;
-  font-weight: bold;
-}
 
 /* * Formulaires */
-label {
-  font-weight: 700;
+
+fieldset {
+  border: 2px solid var(--border-color);
+  border-radius: 1em;
+  padding: 1em;
 }
 
-td {
-  border-bottom: 1px navy solid;
-  padding: 10px;
+legend {
+  color: var(--text-blue);
+  font-weight: 700;
+}
+label {
   font-weight: 700;
 }
 
