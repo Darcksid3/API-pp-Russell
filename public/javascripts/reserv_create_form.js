@@ -23,6 +23,7 @@
         <label for="startDate">Date de début</label>
         <input type="date" name="startDate" id="startDate" min="${minDate}" value="${minDate}" required/>
         `
+        
     pEndtDateElement.innerHTML= `
         <label for="endDate">Date de fin</label>
         <input type="date" name="endDate" id="endDate" min="${minDate}" value="${minDate}" required />
