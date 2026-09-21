@@ -17,9 +17,14 @@
 				<div>
 					<% if (typeof session !=='undefined') { %>
 						<% if (typeof reservations !== 'undefined' && reservations.length > 0) { %>
-						<table>
+						<table class="table">
 							<thead>
-								<td>Numéro du catway</td><td>Nom du client</td><td>Nom du bateau</td><td>Date de début</td><td>Date de fin</td><td></td>
+								<th>Numéro du catway</th>
+								<th>Nom du client</th>
+								<th>Nom du bateau</th>
+								<th>Date de début</th>
+								<th>Date de fin</th>
+								<th></th>
 							</thead>
 							<% reservations.forEach(function(res) { %>
 							<tr>
