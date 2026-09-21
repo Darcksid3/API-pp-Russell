@@ -1,0 +1,71 @@
+/* * Formulaires */
+
+fieldset {
+  border: 2px solid var(--border-color);
+  border-radius: 1em;
+  padding: 1em;
+}
+
+legend {
+  color: var(--text-blue);
+  font-weight: 700;
+}
+
+label {
+  color: var(--text-blue);
+  font-weight: 700;
+}
+
+input {
+  appearance: none;
+  outline: none;
+  border: 2px solid var(--border-box);
+  border-radius: 0.5em;
+  background-color: lightgrey;
+  padding: 0.5em;
+  color: var(--text-blue);
+}
+input:active {
+    border: 1px solid var(--border-box);
+
+}
+
+
+
+
+.form-contnair {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  flex: 1;
+}
+
+.form-radio {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.form-date {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
