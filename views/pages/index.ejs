@@ -23,7 +23,7 @@
                 <p><a href="/logout">Se déconnecté</a></p>
             </p>
             <% } else { %>
-                <button onclick="afficheForm()">Connexion</button>
+                <button id="afficheFormLogin" class="btn-submit" onclick="afficheForm()">Connexion</button>
                 <%- include('../partials/Form_login') -%>
             <% } %>
 

@@ -1,5 +1,4 @@
 const reservations = '<%= reservations %>';
-console.log(reservations);
 const catwayNumber = document.getElementById('catwayNumber').value;
 const formModifyCatway = document.getElementById('Form-modify-catway');
 

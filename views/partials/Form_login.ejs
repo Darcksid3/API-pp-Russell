@@ -1,19 +1,20 @@
 <fieldset id="form_login">
     <legend>Connexion</legend>
-        <form  method="post" action="login">
-        <div>
-            <p>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Votre email !" required />
-            </p>
-            <p>
-                <label for="password">Mot de passe:</label>
-                <input type="password" name="password" id="login_password" required />
+    <form  method="post" action="login">
+        <div class="form-contnair">
+            <div class="form-row">
+                <div class="border-input">
+                    <input type="email" name="email" id="email" placeholder="Votre email !" required />
+                </div>
+            
+                <div class="border-input">
+                    <input type="password" name="password" id="login_password" placeholder="Votre mot de passe" required />
+                </div>
                 <img src="images/oeil.png" style="width: 20px; height: 20px;" alt="afficher le champ" onclick="afficheMdp('login_password')">
-            </p>
-            <p>
-                <button type="submit">Se connecter</button>
-            </p>
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn-submit">Se connecter</button>
+            </div>
         </div>
     </form>
 </fieldset>

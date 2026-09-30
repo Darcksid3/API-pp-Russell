@@ -2,11 +2,14 @@
 let isActive = false;
 function afficheForm() {
   const form = document.getElementById('form_login')
+  const btnAfficheFormLogin = document.getElementById('afficheFormLogin')
   if (!isActive) {
     form.style.display = 'block';
+    btnAfficheFormLogin.style.display = 'none';
     isActive = true;
   } else {
     form.style.display = 'none';
+    btnAfficheFormLogin.style.display = 'block';
     isActive = false;
   } 
 };

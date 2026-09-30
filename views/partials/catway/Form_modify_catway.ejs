@@ -1,5 +1,5 @@
 <% if (typeof catway !== 'undefined') { %> 
-    <table> 
+    <table class="table"> 
         <tr> 
             <td>Numéro</td>
             <td>Type</td>
@@ -17,32 +17,35 @@
     <form method="post" action="/catways/<%= catway ? catway.catwayNumber : '' %>" id="Form-modify-catway"> 
         <fieldset> 
             <legend>Modification d'un catway</legend> 
-            <div id="clickDiv">
-                <p> 
-                    <label for="catwayNumber">Numéro de catway :</label> 
-                    <input type="text" name="catwayNumber" id="catwayNumber" value="<%= catway ? catway.catwayNumber : '' %>" readonly /> 
-                </p> 
-                <p> <label for="short">Short</label> 
-                    <input type="radio" name="catwayType" id="short" value="short" <%= catway && catway.catwayType === 'short' ? 'checked' : '' %> /> 
-                    <label for="long">Long</label> 
-                    <input type="radio" name="catwayType" id="long" value="long" <%= catway && catway.catwayType === 'long' ? 'checked' : '' %> /> 
-                </p>
+            <div id="clickDiv" class="form-contnair">
+                <div class="form-row"> 
+                    <div class="form-row">
+                        <label for="catwayNumber">Numéro de catway :</label> 
+                        <input type="text" name="catwayNumber" id="catwayNumber" value="<%= catway ? catway.catwayNumber : '' %>" readonly /> 
+                    </div>
+                    <div class="form-row">
+                        <label for="short">Short</label> 
+                        <input type="radio" name="catwayType" id="short" value="short" <%= catway && catway.catwayType === 'short' ? 'checked' : '' %> /> 
+                        <label for="long">Long</label> 
+                        <input type="radio" name="catwayType" id="long" value="long" <%= catway && catway.catwayType === 'long' ? 'checked' : '' %> /> 
+                    </div>
+                </div>
                 <div class="form-row">
-                    <div class="form-column"><label for="catwayState">Etat du catway</label></div>
-                    <div class="form-column"><textarea cols="20" rows="3" name="catwayState" id="catwayState"><%=  catway ? catway.catwayState: ''  %></textarea></div>
+                        <label for="catwayState">Etat du catway: </label>
+                            <textarea cols="20" rows="3" name="catwayState" id="catwayState"><%=  catway ? catway.catwayState: ''  %></textarea>
+                </div>
+                <div class="form-row">
+                    <button type="submit" id="modify" class="btn-submit">Modifier et Enregistrer</button>
+                    <button form="Form-delete-catway" type="submit" id="delete" class="btn-delete">Supprimer</button>
                 </div>
             </div>
 
-            <p>
-                <button type="submit" id="modify">Modifier et Enregistrer</button>
-                <button form="Form-delete-catway" type="submit" id="delete">Supprimer</button>
-            </p>
+            
         </fieldset>
         <div>
             <% if(typeof reservations !== 'undefined' && reservations.length > 0) { %>
-                <strong class="attention">Attention des réservations sont associées à ce catway</strong><br />
-                <strong class="attention">Veuillez faire le nésséssaire avant de le supprimer</strong>
-                <table>
+                <p class="attention">Attention des réservations sont associées à ce catway. Veuillez faire le nésséssaire avant de le supprimer</p>
+                <table class="table">
                     <thead>
                         <td>Numéro de réservation</td><td>Nom du client</td><td>Nom du bateau</td><td>Date de début</td><td>Date de fin</td><td></td><td></td>
                     </thead>
