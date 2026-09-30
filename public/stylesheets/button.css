@@ -32,3 +32,32 @@
   color: var(--text-white);
   text-decoration: underline;
 }
+
+.btn-submit {
+  color: var(--text-blue);
+  font-weight: 700;
+  background-color: var(--background-white);
+  border: 2px solid var(--border-color);
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.btn-submit:hover {
+  font-style: italic;
+  background-color: var(--background-light-blue);
+}
+
+.btn-delete {
+  color: var(--text-blue);
+  font-weight: 700;
+  background-color: var(--background-white);
+  border: 2px solid red;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.btn-delete:hover {
+  font-style: italic;
+  background-color: red;
+}
+

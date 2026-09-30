@@ -60,7 +60,7 @@
 						<div>
 							<h3>Toutes les réservations du catway numéro : <%= idCatway %></h3>
 							<% if (typeof oneCatReservations !== 'undefined' && oneCatReservations.length > 0) { %>
-								<table>
+								<table class="table">
 									<thead>
 										<td>Nom du client</td><td>Nom du bateau</td><td>Date de début</td><td>Date de fin</td><td></td><td></td>
 									</thead>
@@ -86,7 +86,7 @@
 						<div>
 							<h3>réservation numéro <%= findOneReservation._id %> du catway numéro : <%= idCatway %></h3>
 							<% if (typeof findOneReservation !== 'undefined') { %>
-								<table>
+								<table class="table">
 									<thead>
 										<td>Nom du client</td><td>Nom du bateau</td><td>Date de début</td><td>Date de fin</td><td></td>
 									</thead>
