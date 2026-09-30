@@ -3,17 +3,15 @@
 	<%- include('../partials/menu') -%>
 
 		<div class="dashcenter">
-			<%- include('../partials/User_connected')-%>
-			<!-- Tableau de bord Réservation MENU -->
-			<nav class="navuser">
-				<a href="/catways/reservations?page=findAllReserv">Affiché toutes les réservations</a>
-				<a href="/catways/reservations?page=createReserv">Crée une réservation</a>
-			</nav>
-			<!-- Fin du menu du tableau de bord utilisateur -->
+			<div>
+				<%- include('../partials/User_connected')-%>
+				<nav class="navuser">
+					<a href="/catways/reservations?page=findAllReserv">Toutes</a>
+					<a href="/catways/reservations?page=createReserv">Nouvelle</a>
+				</nav>
+			</div>
 			<section class="section">
-			<!-- partie visite pour controle de la gestion des sessions -->
 			<h2>Gestion des réservation</h2>
-
 			<!-- Affichage du centre de la page-->
 			<div>
 				<% if (typeof session.page !== 'undefined') { %>
@@ -21,10 +19,17 @@
 						<div>
 							<h3>Toutes les réservations</h3>
 							<% if (typeof allReservations !== 'undefined' && allReservations.length > 0) { %>
-								<table>
+								<table class="table">
 									<thead>
-										<td>Numéro de catway</td><td>Nom du client</td><td>Nom du bateau</td><td>Date de début</td><td>Date de fin</td><td></td><td></td>
+										<th>Catway</th>
+										<th>Nom du client</th>
+										<th>Nom du bateau</th>
+										<th>Date de début</th>
+										<th>Date de fin</th>
+										<th></th>
+										<th></th>
 									</thead>
+									<tbody>
 									<% allReservations.forEach(function(reservation) { %>
 										<tr>
 											<td><%= reservation.catwayNumber %></td>
@@ -36,8 +41,15 @@
 											<td><a href="/catways/<%= reservation.catwayNumber %>/reservations/<%=reservation._id%>?page=modifyReserv" class="modifier">Modifier</a></td>
 										</tr>
 									<% }); %>
+									</tbody>
 									<tfoot>
-										<td>Numéro de catway</td><td>Nom du client</td><td>Nom du bateau</td><td>Date de début</td><td>Date de fin</td><td></td><td></td>
+										<th>Catway</th>
+										<th>Nom du client</th>
+										<th>Nom du bateau</th>
+										<th>Date de début</th>
+										<th>Date de fin</th>
+										<th></th>
+										<th></th>
 									</tfoot>
 								</table>
 							<% } else { %>
@@ -48,7 +60,7 @@
 						<div>
 							<h3>Toutes les réservations du catway numéro : <%= idCatway %></h3>
 							<% if (typeof oneCatReservations !== 'undefined' && oneCatReservations.length > 0) { %>
-								<table>
+								<table class="table">
 									<thead>
 										<td>Nom du client</td><td>Nom du bateau</td><td>Date de début</td><td>Date de fin</td><td></td><td></td>
 									</thead>
@@ -74,7 +86,7 @@
 						<div>
 							<h3>réservation numéro <%= findOneReservation._id %> du catway numéro : <%= idCatway %></h3>
 							<% if (typeof findOneReservation !== 'undefined') { %>
-								<table>
+								<table class="table">
 									<thead>
 										<td>Nom du client</td><td>Nom du bateau</td><td>Date de début</td><td>Date de fin</td><td></td>
 									</thead>

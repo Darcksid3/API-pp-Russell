@@ -23,6 +23,7 @@
         <label for="startDate">Date de début</label>
         <input type="date" name="startDate" id="startDate" min="${minDate}" value="${minDate}" required/>
         `
+        
     pEndtDateElement.innerHTML= `
         <label for="endDate">Date de fin</label>
         <input type="date" name="endDate" id="endDate" min="${minDate}" value="${minDate}" required />
@@ -90,7 +91,12 @@ async function updateAvailabilities() {
     }
 }
 
-startDateInput.addEventListener('change', updateAvailabilities);
+function updateEndDate() {
+    endDateInput.setAttribute('min', startDateInput.value );
+    endDateInput.setAttribute('value', startDateInput.value );
+}
+
+startDateInput.addEventListener('change', updateEndDate, updateAvailabilities);
 endDateInput.addEventListener('change', updateAvailabilities);
 
 typeRadios.forEach(radio => {

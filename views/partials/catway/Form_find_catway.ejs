@@ -2,14 +2,16 @@
 <form id="Form_find_one_catway">
     <fieldset>
         <legend>Recherché un catway</legend>
-        <p>
-            <label for="all">Tous</label>
-            <input type="radio" name="catwayType" id="all" value="all" checked/>
-            <label for="short">Short</label>
-            <input type="radio" name="catwayType" id="short" value="short" />
-            <label for="long">Long</label>
-            <input type="radio" name="catwayType" id="long" value="long" />
-        </p>
+        <div class="form-column">
+            <div class="form-row">
+                <label for="all">Tous:</label>
+                <input type="radio" name="catwayType" id="all" value="all" checked/>
+                <label for="short">Short:</label>
+                <input type="radio" name="catwayType" id="short" value="short" />
+                <label for="long">Long:</label>
+                <input type="radio" name="catwayType" id="long" value="long" />
+            </div>
+        </div>
         <p id="p-catway-find">
             <label for="idFind-catway-select">Numéro de catway</label>
             <select name="idFind" id="idFind-catway-select">
@@ -17,22 +19,24 @@
         </p>
 
         <p>
-            <button type="submit">Rechercher le catway</button>
+            <button type="submit" class="btn-submit">Rechercher le catway</button>
         </p>
         
     </fieldset>
 </form>
-<div id="resultat" class="resultat">
+
             <% if (typeof catway !== 'undefined') {  %>
+            <div id="resultat" class="resultat">
                 <p> Numéro du catway : <%= catway.catwayNumber %></p>
                 <p> Type de catway : <%= catway.catwayType %></p>
                 <p> Etat du catway : <%= catway.catwayState %></p>
                 <p><a href="/catways/<%= catway.catwayNumber %>?page=modifyCatway" class="modifier">Modifier</a></p>
+            </div>
             <%  } else { }%>
-</div>
+
 <div>
             <% if(typeof reservations !== 'undefined' && reservations.length > 0) { %>
-                <table>
+                <table class="table">
                     <thead>
                         <td>Numéro de réservation</td><td>Nom du client</td><td>Nom du bateau</td><td>Date de début</td><td>Date de fin</td><td></td><td></td>
                     </thead>

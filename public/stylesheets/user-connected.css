@@ -1,0 +1,15 @@
+.user-connected {
+  margin: 1em 2em;
+  text-align: center;
+  background-color: var(--background-light-blue);
+  color:var(--text-blue);
+  display: flex;
+  justify-content: space-evenly;
+  border: 4px solid var(--border-color);
+	border-radius: 1em;
+}
+
+.user-connected-info {
+    font-style: italic;
+    font-weight: 700;
+}
