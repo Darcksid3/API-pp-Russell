@@ -4,7 +4,7 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
-const MongoStore = require('connect-mongo');
+const MongoStore = require('connect-mongo').default;
 
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -31,7 +31,7 @@ const options = {
     info: {
       title: 'Port de plaisance Russell',
       version: '1.0.0',
-      description: 'Documentation de l’API',
+      description: 'Documentation de l\'API',
     },
   },
   apis: ['./routes/*.js'], 
@@ -56,11 +56,11 @@ app.use(session({
   saveUninitialized: false,
   rolling: true,
 
-  store : MongoStore.create({
+  store: MongoStore.create({
     mongoUrl: process.env.MONGO_URL,
     ttl: 2 * 24 * 60 * 60,
     autoRemove:'interval',
-    autoRemoveInterval: '10',
+    autoRemoveInterval: 10,
   }),
 
   cookies: { 
